@@ -270,6 +270,7 @@ void recv_task(void *foo) {
                 register_message_t *reg_msg;
                 reg_msg = (register_message_t *) qmsg.esp_msg.message;
                 add_or_update_terminal(reg_msg->mac, qmsg.mac, reg_msg->type, reg_msg->tag);
+                generic_send_esp_msg(&(qmsg.esp_msg));
                 break;
             case CONFIRM:
                 if ( strcmp((char *) qmsg.esp_msg.dest_tag, TAG) == 0) {
