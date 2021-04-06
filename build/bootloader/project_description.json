@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/Users/niklas/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/Users/niklas/esp/esp-now-repeater/build/bootloader",
+    "config_file":        "/Users/niklas/esp/esp-now-repeater/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.4-dev-744-g1cb31e509",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/Users/niklas/esp/esp-idf/components/efuse/Kconfig;/Users/niklas/esp/esp-idf/components/esp32/Kconfig;/Users/niklas/esp/esp-idf/components/esp_common/Kconfig;/Users/niklas/esp/esp-idf/components/esp_hw_support/Kconfig;/Users/niklas/esp/esp-idf/components/esp_system/Kconfig;/Users/niklas/esp/esp-idf/components/freertos/Kconfig;/Users/niklas/esp/esp-idf/components/log/Kconfig;/Users/niklas/esp/esp-idf/components/newlib/Kconfig;/Users/niklas/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/niklas/esp/esp-idf/components/bootloader/Kconfig.projbuild;/Users/niklas/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/Users/niklas/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/niklas/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/niklas/esp/esp-idf/components/bootloader", "/Users/niklas/esp/esp-idf/components/bootloader_support", "/Users/niklas/esp/esp-idf/components/efuse", "/Users/niklas/esp/esp-idf/components/esp32", "/Users/niklas/esp/esp-idf/components/esp_common", "/Users/niklas/esp/esp-idf/components/esp_hw_support", "/Users/niklas/esp/esp-idf/components/esp_rom", "/Users/niklas/esp/esp-idf/components/esp_system", "/Users/niklas/esp/esp-idf/components/esptool_py", "/Users/niklas/esp/esp-idf/components/freertos", "/Users/niklas/esp/esp-idf/components/hal", "/Users/niklas/esp/esp-idf/components/log", "/Users/niklas/esp/esp-idf/components/bootloader/subproject/main", "/Users/niklas/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/Users/niklas/esp/esp-idf/components/newlib", "/Users/niklas/esp/esp-idf/components/partition_table", "/Users/niklas/esp/esp-idf/components/soc", "/Users/niklas/esp/esp-idf/components/spi_flash", "/Users/niklas/esp/esp-idf/components/xtensa", "" ]
+}
