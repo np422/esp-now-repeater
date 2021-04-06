@@ -205,7 +205,7 @@ void send_reg_msg() {
     vTaskDelay(delay);
 }
 
-static void send_cb(const uint8_t *mac_addr, esp_now_send_status_t status) {
+void send_cb(const uint8_t *mac_addr, esp_now_send_status_t status) {
     if (status == ESP_NOW_SEND_SUCCESS ) {
         ESP_LOGI(PROG, "ESP_NOW_SEND callback, status SUCCESS ");
     } else {
@@ -213,7 +213,7 @@ static void send_cb(const uint8_t *mac_addr, esp_now_send_status_t status) {
     }
 }
 
-static void generic_send_esp_msg(esp_now_message_t *msg) {
+void generic_send_esp_msg(esp_now_message_t *msg) {
     uint8_t mac[ESP_NOW_ETH_ALEN];
     uint8_t *p;
     const TickType_t delay = 100 / portTICK_PERIOD_MS;
@@ -234,7 +234,7 @@ static void generic_send_esp_msg(esp_now_message_t *msg) {
 }
 
 
-static void recv_cb(const uint8_t *mac_addr, const uint8_t *data, int len) {
+void recv_cb(const uint8_t *mac_addr, const uint8_t *data, int len) {
     esp_now_queue_message_t queue_msg;
     BaseType_t enqueue_retval;
 
@@ -257,7 +257,7 @@ static void recv_cb(const uint8_t *mac_addr, const uint8_t *data, int len) {
     ESP_LOGI(PROG, "RECV_CALLBACK finished");
 }
 
-static void recv_task(void *foo) {
+void recv_task(void *foo) {
     esp_now_queue_message_t qmsg;
     for(;;) {
         ESP_LOGI(PROG, "Starting to pull queue");
@@ -291,7 +291,7 @@ static void recv_task(void *foo) {
 
 
 
-static void esp_init(void) {
+void esp_init(void) {
 
     const TickType_t delay = 10000 / portTICK_PERIOD_MS;
 
@@ -312,7 +312,7 @@ static void esp_init(void) {
     send_reg_msg();
 }
 
-static void periodic_timer_callback(void* arg) {
+void periodic_timer_callback(void* arg) {
     send_reg_msg();
 }
 void timer_init() {
