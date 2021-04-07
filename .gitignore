@@ -1,3 +1,7 @@
+#Build files are not interesting
+
+build/**
+
 # Prerequisites
 *.d
 
